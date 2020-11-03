@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="practicatableview" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fHj-dP-MQk">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celdaAlumno" rowHeight="80" id="GiH-Ld-ceh" customClass="CeldaAlumnoController" customModule="practicatableview" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GiH-Ld-ceh" id="1ST-JP-Tv1">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre del estudiante" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjl-JC-BIF">
+                                                    <rect key="frame" x="20" y="11" width="216" height="27"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matrícula" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qiD-eN-JjP">
+                                                    <rect key="frame" x="20" y="39" width="71" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carrera" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90f-er-diP">
+                                                    <rect key="frame" x="336" y="39" width="58" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="90f-er-diP" secondAttribute="bottom" constant="9" id="2zG-xy-ncq"/>
+                                                <constraint firstItem="qiD-eN-JjP" firstAttribute="leading" secondItem="1ST-JP-Tv1" secondAttribute="leadingMargin" id="W6M-zO-yWO"/>
+                                                <constraint firstItem="qiD-eN-JjP" firstAttribute="top" secondItem="kjl-JC-BIF" secondAttribute="bottom" constant="1" id="Ymm-g1-JNA"/>
+                                                <constraint firstItem="90f-er-diP" firstAttribute="trailing" secondItem="1ST-JP-Tv1" secondAttribute="trailingMargin" id="abK-OE-LAh"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="qiD-eN-JjP" secondAttribute="bottom" constant="9" id="qcv-zI-iPd"/>
+                                                <constraint firstItem="kjl-JC-BIF" firstAttribute="top" secondItem="1ST-JP-Tv1" secondAttribute="topMargin" id="rqq-F7-hvH"/>
+                                                <constraint firstItem="kjl-JC-BIF" firstAttribute="leading" secondItem="1ST-JP-Tv1" secondAttribute="leadingMargin" id="ute-dn-wE6"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblCarrera" destination="90f-er-diP" id="sN1-co-swg"/>
+                                            <outlet property="lblMatricula" destination="qiD-eN-JjP" id="FHt-5V-0R5"/>
+                                            <outlet property="lblNombre" destination="kjl-JC-BIF" id="AxE-cM-X7O"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Ho8-8v-VYH"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="fHj-dP-MQk" secondAttribute="bottom" id="Sge-ST-klc"/>
+                            <constraint firstItem="fHj-dP-MQk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dDN-JV-RQP"/>
+                            <constraint firstItem="fHj-dP-MQk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hB0-nX-VDT"/>
+                            <constraint firstItem="fHj-dP-MQk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pfw-y5-hnQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
